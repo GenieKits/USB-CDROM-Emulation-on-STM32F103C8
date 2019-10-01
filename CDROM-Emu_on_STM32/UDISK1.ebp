@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBitz_project_file>
+	<EmBitzVersion release="1.11" revision="0" />
+	<FileVersion major="1" minor="0" />
+	<Project>
+		<Option title="UDISK1" />
+		<Option pch_mode="2" />
+		<Option compiler="armgcc_eb" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\UDISK1.elf" />
+				<Option object_output="obj\Debug\" />
+				<Option type="0" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O0" />
+					<Add option="-g3" />
+					<Add symbol="STM32F103xB" />
+				</Compiler>
+				<Cpp>
+					<Add option="-Wall" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O0" />
+					<Add option="-g3" />
+				</Cpp>
+				<Assembler>
+					<Add option="-Wa,--gdwarf-2" />
+				</Assembler>
+				<Linker>
+					<Add option="-Wl,--gc-sections" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\UDISK1.elf" />
+				<Option object_output="obj\Release\" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O2" />
+					<Add option="-g2" />
+					<Add symbol="STM32F103xB" />
+				</Compiler>
+				<Cpp>
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O2" />
+					<Add option="-g2" />
+				</Cpp>
+				<Assembler>
+					<Add option="-Wa,--no-warn" />
+				</Assembler>
+				<Linker>
+					<Add option="-Wl,--gc-sections" />
+				</Linker>
+			</Target>
+		</Build>
+		<Device>
+			<Add option="$device=cortex-m3" />
+			<Add option="$stack=0x0100" />
+			<Add option="$heap=0x0000" />
+			<Add option="$lscript=./stm32f103c8_flash.ld" />
+		</Device>
+		<Compiler>
+			<Add option="-mfloat-abi=soft" />
+			<Add option="-fno-strict-aliasing" />
+			<Add symbol="STM32F103C8" />
+			<Add symbol="STM32F10X_MD" />
+			<Add directory=".\inc" />
+			<Add directory=".\src" />
+			<Add directory=".\cmsis" />
+		</Compiler>
+		<Linker>
+			<Add option="-eb_start_files" />
+			<Add option="-eb_lib=n" />
+		</Linker>
+		<Unit filename="CMSIS\Device\STM32F1xx\Include\stm32f103xb.h" />
+		<Unit filename="CMSIS\Device\STM32F1xx\Include\stm32f1xx.h" />
+		<Unit filename="CMSIS\Device\STM32F1xx\Include\system_stm32f1xx.h" />
+		<Unit filename="CMSIS\Include\cmsis_armcc.h" />
+		<Unit filename="CMSIS\Include\cmsis_armclang.h" />
+		<Unit filename="CMSIS\Include\cmsis_compiler.h" />
+		<Unit filename="CMSIS\Include\cmsis_gcc.h" />
+		<Unit filename="CMSIS\Include\cmsis_iccarm.h" />
+		<Unit filename="CMSIS\Include\cmsis_version.h" />
+		<Unit filename="CMSIS\Include\core_armv8mbl.h" />
+		<Unit filename="CMSIS\Include\core_armv8mml.h" />
+		<Unit filename="CMSIS\Include\core_cm0.h" />
+		<Unit filename="CMSIS\Include\core_cm0plus.h" />
+		<Unit filename="CMSIS\Include\core_cm1.h" />
+		<Unit filename="CMSIS\Include\core_cm23.h" />
+		<Unit filename="CMSIS\Include\core_cm3.h" />
+		<Unit filename="CMSIS\Include\core_cm33.h" />
+		<Unit filename="CMSIS\Include\core_cm4.h" />
+		<Unit filename="CMSIS\Include\core_cm7.h" />
+		<Unit filename="CMSIS\Include\core_sc000.h" />
+		<Unit filename="CMSIS\Include\core_sc300.h" />
+		<Unit filename="CMSIS\Include\mpu_armv7.h" />
+		<Unit filename="CMSIS\Include\mpu_armv8.h" />
+		<Unit filename="CMSIS\Include\tz_context.h" />
+		<Unit filename="HAL\Inc\Legacy\stm32_hal_legacy.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_cortex.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_def.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_dma.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_dma_ex.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_exti.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_flash.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_flash_ex.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_gpio.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_gpio_ex.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_pcd.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_pcd_ex.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_pwr.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_rcc.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_rcc_ex.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_spi.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_tim.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_hal_tim_ex.h" />
+		<Unit filename="HAL\Inc\stm32f1xx_ll_usb.h" />
+		<Unit filename="HAL\Src\stm32f1xx_hal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_cortex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_dma.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_exti.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_flash_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_gpio_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_pcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_pcd_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_pwr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_rcc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_rcc_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_tim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_hal_tim_ex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="HAL\Src\stm32f1xx_ll_usb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MAIN\Inc\main.h" />
+		<Unit filename="MAIN\Inc\spiflash.h" />
+		<Unit filename="MAIN\Inc\stm32f1xx_hal_conf.h" />
+		<Unit filename="MAIN\Inc\stm32f1xx_it.h" />
+		<Unit filename="MAIN\Inc\usb_device.h" />
+		<Unit filename="MAIN\Inc\usbd_conf.h" />
+		<Unit filename="MAIN\Inc\usbd_desc.h" />
+		<Unit filename="MAIN\Inc\usbd_storage_if.h" />
+		<Unit filename="MAIN\Src\main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MAIN\Src\spiflash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MAIN\Src\stm32f1xx_hal_msp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MAIN\Src\stm32f1xx_it.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MAIN\Src\system_stm32f1xx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MAIN\Src\usb_device.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MAIN\Src\usbd_conf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MAIN\Src\usbd_desc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MAIN\Src\usbd_storage_if.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="readme.txt" />
+		<Unit filename="startup_stm32f10x_md.S">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32f103c8_flash.ld" />
+		<Unit filename="stm32f103c8_sram.ld" />
+		<Unit filename="USB\Class\Inc\usbd_msc.h" />
+		<Unit filename="USB\Class\Inc\usbd_msc_bot.h" />
+		<Unit filename="USB\Class\Inc\usbd_msc_data.h" />
+		<Unit filename="USB\Class\Inc\usbd_msc_scsi.h" />
+		<Unit filename="USB\Class\Src\usbd_msc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="USB\Class\Src\usbd_msc_bot.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="USB\Class\Src\usbd_msc_data.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="USB\Class\Src\usbd_msc_scsi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="USB\Core\Inc\usbd_core.h" />
+		<Unit filename="USB\Core\Inc\usbd_ctlreq.h" />
+		<Unit filename="USB\Core\Inc\usbd_def.h" />
+		<Unit filename="USB\Core\Inc\usbd_ioreq.h" />
+		<Unit filename="USB\Core\Src\usbd_core.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="USB\Core\Src\usbd_ctlreq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="USB\Core\Src\usbd_ioreq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<target_debugging_settings target="Release" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics" gdb_before_conn="" gdb_after_conn="">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="1" />
+							<option opt_id="ID_DONT_CONN_RESET" opt_value="0" />
+							<option opt_id="ID_ALL_MODE_DEBUG" opt_value="0" />
+							<option opt_id="ID_DEV_ADDR" opt_value="" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+				<target_debugging_settings target="Debug" active_interface="Generic">
+					<debug_interface interface_id="Generic" ip_address="localhost" ip_port="3333" path="${EMBITZ}\share\contrib\openocd\bin" executable="openocd.exe" description="" dont_start_server="false" backoff_time="1000" options="2" reg_filter="0" active_family="All" gdb_before_conn="" gdb_after_conn="monitor reset halt&#x0D;&#x0A;monitor stm32f1x mass_erase 0&#x0D;&#x0A;load&#x0D;&#x0A;monitor reset halt&#x0D;&#x0A;">
+						<family_options family_id="All">
+							<option opt_id="ID_CMD_BEFORE" opt_value="" />
+							<option opt_id="ID_GDB_SERVER_CL" opt_value="" />
+							<option opt_id="ID_CMD_RESET" opt_value="monitor reset halt" />
+							<option opt_id="ID_SERVER_TERMINATE" opt_value="0" />
+							<option opt_id="ID_CMD_AFTER" opt_value="" />
+						</family_options>
+					</debug_interface>
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBITZ}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics" gdb_before_conn="" gdb_after_conn="">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="1" />
+							<option opt_id="ID_DONT_CONN_RESET" opt_value="0" />
+							<option opt_id="ID_ALL_MODE_DEBUG" opt_value="0" />
+							<option opt_id="ID_DEV_ADDR" opt_value="" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+			</debugger>
+		</Extensions>
+	</Project>
+</EmBitz_project_file>
